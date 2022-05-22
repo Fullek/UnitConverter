@@ -1,8 +1,10 @@
 import java.util.HashMap;
 
 public class DistanceConverter {
+
     InputManager inputManager;
     StringBuilder stringBuilder;
+
     private final HashMap<Integer, String> selectionList = new HashMap<>();
 
     public DistanceConverter(InputManager inputManager, StringBuilder stringBuilder) {
@@ -30,11 +32,17 @@ public class DistanceConverter {
             float distance = inputManager.getFloatInput();
 
             switch (distanceType) {
-                case 1 -> System.out.println(stringBuilder.append(distance).append(" meters are ")
-                                .append(convertMetricToImperial(distance)).append(" yards "));
+                case 1 -> System.out.println(stringBuilder
+                        .append(distance)
+                        .append(" meters are ")
+                        .append(convertMetricToImperial(distance))
+                        .append(" yards "));
 
-                case 2 -> System.out.println(stringBuilder.append(distance).append(" yards are ")
-                                .append(convertImperialToMetric(distance)).append(" meters "));
+                case 2 -> System.out.println(stringBuilder
+                        .append(distance)
+                        .append(" yards are ")
+                        .append(convertImperialToMetric(distance))
+                        .append(" meters "));
             }
         } else {
             System.out.println("You must type one of " + selectionList.size() + " options!");

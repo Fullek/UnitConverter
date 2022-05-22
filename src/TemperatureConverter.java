@@ -34,31 +34,34 @@ public class TemperatureConverter {
             float degrees = inputManager.getFloatInput();
 
             switch (degreeType) {
-                case 1 -> System.out.println(stringBuilder.append(degrees).append(" Celsius degrees are ")
-                                .append(convertCelsiusToFahrenheit(degrees)).append(" Fahrenheit degrees, and ")
-                                .append(convertCelsiusToKelvin(degrees)).append(" Kelvins "));
+                case 1 -> System.out.println(stringBuilder
+                        .append(degrees)
+                        .append(" Celsius degrees are ")
+                        .append(convertCelsiusToFahrenheit(degrees))
+                        .append(" Fahrenheit degrees, and ")
+                        .append(convertCelsiusToKelvin(degrees))
+                        .append(" Kelvins "));
 
-                case 2 -> System.out.println(stringBuilder.append(degrees).append(" Fahrenheit degrees are ")
-                                .append(convertFahrenheitToCelsius(degrees)).append(" Celsius degrees, and ")
-                                .append(convertFahrenheitToKelvins(degrees)).append(" Kelvins "));
+                case 2 -> System.out.println(stringBuilder
+                        .append(degrees)
+                        .append(" Fahrenheit degrees are ")
+                        .append(convertFahrenheitToCelsius(degrees))
+                        .append(" Celsius degrees, and ")
+                        .append(convertFahrenheitToKelvins(degrees))
+                        .append(" Kelvins "));
 
-                case 3 -> System.out.println(stringBuilder.append(degrees).append(" Kelvins are ")
-                                .append(convertKelvinsToCelsius(degrees)).append(" Celsius degrees, and ")
-                                .append(convertKelvinsToFahrenheit(degrees)).append(" Fahrenheit degrees "));
+                case 3 -> System.out.println(stringBuilder
+                        .append(degrees)
+                        .append(" Kelvins are ")
+                        .append(convertKelvinsToCelsius(degrees))
+                        .append(" Celsius degrees, and ")
+                        .append(convertKelvinsToFahrenheit(degrees)).append(" Fahrenheit degrees "));
             }
         } else {
             System.out.println("You must type one of " + selectionList.size() + " options above!");
             showCalculatedTemperature();
         }
     }
-
-//    public void takeTempMenuException() {
-//        try {
-//            selectTempMenu();
-//        } catch (Exception exception) {
-//            System.out.println("You must type the number as follows above!");
-//        }
-//    }
 
     private float convertCelsiusToFahrenheit(float degrees) {
         return degrees * 9/5 + 32;
