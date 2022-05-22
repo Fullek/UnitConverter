@@ -11,17 +11,17 @@ public class ProgramStarter {
         System.out.println("What would you like to convert? ");
         System.out.println("1 -> Temperature");
         System.out.println("2 -> Distance");
-        showUserChoice();
+        getUserChoice();
     }
 
-    private void showUserChoice() {
+    private void getUserChoice() {
         int userChoice = distanceConverter.inputManager.getIntegerInput();
         switch (userChoice) {
             case 1 -> temperatureConverter.showCalculatedTemperature();
             case 2 -> distanceConverter.showCalculatedDistance();
             default -> {
                 System.out.println("Wrong option selected. Try again.\n");
-                showUserChoice();
+                getUserChoice();
             }
         }
     }
