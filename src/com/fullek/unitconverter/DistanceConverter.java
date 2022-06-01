@@ -1,16 +1,13 @@
+package com.fullek.unitconverter;
+
 import java.util.HashMap;
 
 public class DistanceConverter {
 
-    InputManager inputManager;
-    StringBuilder stringBuilder;
+    InputManager inputManager = new InputManager();
+    StringBuilder stringBuilder = new StringBuilder();
 
     private final HashMap<Integer, String> selectionList = new HashMap<>();
-
-    public DistanceConverter(InputManager inputManager, StringBuilder stringBuilder) {
-        this.inputManager = inputManager;
-        this.stringBuilder = stringBuilder;
-    }
 
     private void putDistanceOptions() {
         selectionList.put(1, "Metric");

@@ -1,3 +1,5 @@
+package com.fullek.unitconverter;
+
 import java.util.Scanner;
 
 public class InputManager {

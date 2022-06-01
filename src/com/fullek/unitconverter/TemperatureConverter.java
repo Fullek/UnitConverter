@@ -1,14 +1,11 @@
+package com.fullek.unitconverter;
+
 import java.util.HashMap;
 
 public class TemperatureConverter {
 
-    InputManager inputManager;
-    StringBuilder stringBuilder;
-
-    public TemperatureConverter(InputManager inputManager, StringBuilder stringBuilder) {
-        this.inputManager = inputManager;
-        this.stringBuilder = stringBuilder;
-    }
+    InputManager inputManager = new InputManager();
+    StringBuilder stringBuilder = new StringBuilder();
 
     private final HashMap<Integer, String> selectionList = new HashMap<>();
 
